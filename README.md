@@ -30,13 +30,28 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+to build a stateful class component you have to first build the component by defining the component class to extend React.Component. Then to add state, define this.state inside the constructor method
+
 2. Describe the different phases of the component lifecycle.
+
+phase 1: component executes component logic and establishes listeners
+phase 2: component compares the DOM with returned jsx
+phase 3: component executes componentWillUpdate if differences found
+phase 4: component renders differences between returned jsx and DOM
+phase 5: component executes componentDidMount if lifecycle is ending initial render
+phase 6: component executes componentDidUpdate if state changed from last render update
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+^
+
 4. Define stateful logic.
 
+Any code that uses state or leverages react states
+
 5. Describe how to test a React component with React Testing Library.
+
+first plan out what you want to test. Then call test functions and give description of what it is youre testing in the function. write tests using reacts testing libraries
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

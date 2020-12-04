@@ -15,13 +15,13 @@ const initialValue = {
 // and replace the necessary stateful logic from CheckoutForm with the hook
 
 const CheckoutForm = (props) => {
-  const [values, showSuccessMessage, handleChanges, handleSubmit ] = useForm(initialValue)
+const [values, showSuccessMessage, handleChanges, handleSubmit ] = useForm(initialValue, false)
 
   return (
     <>
       <form onSubmit={handleSubmit}>
         <h2>Checkout Form</h2>
-        <label htmlFor="firstName">
+        <label>
           First Name:
           <input
             name="firstName"
@@ -29,7 +29,7 @@ const CheckoutForm = (props) => {
             onChange={handleChanges}
           />
         </label>
-        <label htmlFor="lastName">
+        <label>
           Last Name:
           <input
             name="lastName"
@@ -37,7 +37,7 @@ const CheckoutForm = (props) => {
             onChange={handleChanges}
           />
         </label>
-        <label htmlFor="address">
+        <label>
           Address:
           <input
             name="address"
@@ -45,17 +45,17 @@ const CheckoutForm = (props) => {
             onChange={handleChanges}
           />
         </label>
-        <label htmlFor="city">
+        <label>
           City:
           <input name="city" value={values.city} onChange={handleChanges} />
         </label>
-        <label htmlFor="state">
+        <label>
           State:
           <input name="state" value={values.state} onChange={handleChanges} />
         </label>
-        <label htmlFor="zip">
+        <label>
           Zip:
-          <input id="zip" name="zip" value={values.zip} onChange={handleChanges} />
+          <input name="zip" value={values.zip} onChange={handleChanges} />
         </label>
         <button>Checkout</button>
       </form>
